@@ -1,0 +1,44 @@
+﻿<Window x:Class="EyeCareApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EyeCareApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="600"
+        AllowsTransparency="True" WindowStyle="None" Background="Transparent"
+        Topmost="True"
+        ResizeMode="NoResize"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Canvas Name="canvas" Height="600" Width="600" Visibility="{Binding Path=Visibility, Mode=OneWay, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}">
+            <Ellipse 
+                Canvas.Left="100"
+                Canvas.Top="200"
+                Fill="Pink"
+                Height="200"
+                Width="400"
+                StrokeThickness="8"
+                Stroke="Black"/>
+
+            <Ellipse 
+                Canvas.Left="220"
+                Canvas.Top="204"
+                Fill="Green"
+                Height="192"
+                Width="160"
+                StrokeThickness="8"
+                Stroke="Black"/>
+
+            <Ellipse 
+                Canvas.Left="250"
+                Canvas.Top="250"
+                Fill="Black"
+                Height="100"
+                Width="100"
+                StrokeThickness="5"
+                Stroke="Black"/>            
+        </Canvas>
+    </Grid>
+</Window>
